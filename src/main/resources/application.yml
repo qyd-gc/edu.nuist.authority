@@ -1,0 +1,38 @@
+user:
+   userroles:
+       - admin
+       - user
+sessionname: user
+errorhtml:
+     /error
+errorjson: ERROR
+
+spring:
+ profiles:
+  active: log, user
+ servlet:
+  multipart:
+   enabled: true
+   file-size-threshold: 0
+   max-file-size: 50MB
+   max-request-size: 50MB
+ thymeleaf:
+  cache: false
+  prefix: classpath:/templates/
+ datasource:
+  url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+  username: root
+  password: 1234abcd
+  driverClassName: com.mysql.cj.jdbc.Driver
+  platform: mysql
+  type: com.alibaba.druid.pool.DruidDataSource
+ jpa:
+  # 配置 DBMS 类型
+  database: MYSQL
+  # 配置是否将执行的 SQL 输出到日志
+  show-sql: true
+  properties:
+   hibernate:
+    hbm2ddl:
+     # 配置开启自动更新表结构
+     auto: update
