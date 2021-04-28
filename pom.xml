@@ -8,7 +8,7 @@
         <version>2.4.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>io.github.hjhaohj</groupId>
+    <groupId>io.github.nuist-software</groupId>
     <artifactId>authority</artifactId>
     <version>1.0</version>
     <name>authority</name>

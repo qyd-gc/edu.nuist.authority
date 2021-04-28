@@ -5,7 +5,7 @@ user:
 sessionname: user
 errorhtml:
      /error
-errorjson: ERROR
+errormessage: ERROR
 
 spring:
  profiles:

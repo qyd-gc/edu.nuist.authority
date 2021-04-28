@@ -5,7 +5,6 @@ import lombok.Data;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-@Data
 public class UserRoleEnable {
     private String roles;
     public String[] getRoles() {

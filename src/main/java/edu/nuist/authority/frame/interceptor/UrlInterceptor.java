@@ -19,8 +19,8 @@ import java.io.PrintWriter;
 public class UrlInterceptor implements HandlerInterceptor {
     @Value("${errorhtml}")
     private String errorurl;
-    @Value("${errorjson}")
-    private String errorjson;
+    @Value("${errormessage}")
+    private String errormessage;
     @Value("${sessionname}")
     private String sessionName;
 
@@ -103,7 +103,7 @@ public class UrlInterceptor implements HandlerInterceptor {
     public void restcontrollerError(HttpServletResponse response) throws IOException {
         PrintWriter out = null;
         out = response.getWriter();
-        out.append(errorjson);
+        out.append(errormessage);
     }
 
     @Override
